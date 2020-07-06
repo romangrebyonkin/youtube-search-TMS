@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway:wght@300&display=swap');
+
+.video_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff7f7;
+    margin: 30px;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    color: #204969;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.title_box {
+    background: rgba(0,0,0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+}
+
+.title_box:hover {
+    background: rgba(8,255,200, 0.8);
+    transition-duration: .5s;
+
+}
+
+.video_discription_click {
+    border-radius: 0 0 20px 20px;
+    background: #08ffc8;
+    color: #204969;
+    font-weight: bold;
+    padding: 10px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.video_discription {
+    background: #08ffc8;
+    border-radius: 10px 10px 0 0;
+    color: #204969;
+    width: 300px;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+    overflow: auto;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    font-size: 16px;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-style: italic;
+} 
+
+h1:hover {
+    color: #204969;
+    transition-duration: .5s;
+}
+
+h2 {
+    color: #204969;
+    font-size: 14px;
+}
+
+img {
+    border-radius: 10px 10px 0 0;
+}
+
+input, button {
+    outline: none;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+
+input {
+    width: 40%;
+    border: none;
+    padding-left: 20px;
+    /* box-shadow: 0px 0px 17px -1px rgba(0,0,0,0.32); */
+}
+
+input:focus::-webkit-input-placeholder { 
+    color:transparent;
+}
+input:focus:-moz-placeholder { 
+    color:transparent; 
+} 
+input:focus::-moz-placeholder { 
+    color:transparent; 
+} 
+input:focus:-ms-input-placeholder { 
+    color:transparent; 
+} 
+
+button {
+    width: 10%;
+    color: #204969;
+    background: #08ffc8;
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 1px;
+}
+
+p {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.next_page_button {
+   width: 200px;
+   margin: auto;
+}
+
+.link {
+    padding: 10px;
+    background: #08ffc8;
+}
