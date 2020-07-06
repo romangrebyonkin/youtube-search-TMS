@@ -4,8 +4,7 @@ const initialState = {
     text: '',
     list: [],
     likes: [],
-    nextPage: '',
-    prevPage: '',
+    totalVideoCount: '',
     test: []
 }
 
@@ -22,8 +21,7 @@ const videoReducer = (state = initialState, action) => {
                 ...state,
                 likes: action.payload,
                 list: action.newPayload,
-                nextPage: action.nextPageToken,
-                prevPage: action.prevPageToken
+                totalVideoCount: action.totalVideoCount
             }   
         case FETCH_NEXT_PAGE:
             return{

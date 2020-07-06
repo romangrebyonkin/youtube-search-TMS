@@ -1,28 +1,52 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import { fetchNextPage } from '../action'
 import './components.css'
+import { PageNum } from './PageNumber'
 
 export const Pagination = () => {
-    const nextPage = useSelector(state => state.video.nextPage)
-    // const prevPage = useSelector(state => state.video.prevPage)
-    const dispatch = useDispatch()
+    const totalVideoCount = useSelector(state => state.video.totalVideoCount)
+    
 
-    const put = () => {
-        dispatch(fetchNextPage(nextPage))
+    const pageSize = 3
+    let pagesCount = totalVideoCount / pageSize
+    let pages = []
+
+    for(let i = 1; i <= pagesCount; i++) {
+        pages.push(i)
     }
 
-    // const back = () => {
-    //     dispatch(fetchPrevVideo(prevPage))
-    // }
-
-
-
-    return (
+    // const myEvent = () => {
+    //     let pageNum
         
-        <div className='next_page_button' >
-            {/* <a className='link' href='!#' onClick={back}>Prev page</a> */}
-            <a className='link' href='!#' onClick={put}>Next page</a>
-        </div>
+    //     console.log(pageNum)
+
+    //     let start = (pageNum - 1) * pageSize
+    //     let end = start + pageSize
+
+    //     let notes = totalVideoData.slice(start, end)
+    //     console.log(notes)
+    // }
+    //const dispatch = useDispatch() 
+    return (
+        <div className='wrapper'>
+        { pages.map((item, index) => (
+            <PageNum 
+            key={index}
+            value={item}
+            //   key={index}
+            //   title={item.snippet.title}
+            //   image={item.snippet.thumbnails.medium.url}
+            //   chanelName={item.snippet.channelTitle}
+            //   view={item.statistics.viewCount}
+            //   date={item.snippet.publishedAt}
+            //   likes={item.statistics.likeCount}
+            //   dislikes={item.statistics.dislikeCount}
+            //   link={'https://www.youtube.com/watch?v='}
+            //   id={item.id}
+            //   description={item.snippet.description}
+            />
+          )
+          )}
+      </div>
     )
 }
