@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway:wght@300&display=swap');
 
+.video_box, .video_discription, input, button, .list_item {
+    font-family: 'Quicksand', sans-serif;
+}
+
 .video_box {
     display: flex;
     flex-direction: column;
@@ -10,8 +14,8 @@
     border-radius: 20px;
     position: relative;
     color: #204969;
-    font-family: 'Quicksand', sans-serif;
-    margin-top: 100px;
+    margin: 30px;
+    box-shadow: 0px 0px 17px -1px rgba(0,0,0,0.32);
 }
 
 .title_box {
@@ -50,7 +54,7 @@
     font-size: 14px;
     padding: 10px;
     overflow: auto;
-    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
 }
 
 h1 {
@@ -81,7 +85,6 @@ input, button {
     height: 40px;
     border: none;
     border-radius: 20px;
-    font-family: 'Quicksand', sans-serif;
     font-size: 18px;
 }
 
@@ -89,7 +92,6 @@ input {
     width: 40%;
     border: none;
     padding-left: 20px;
-    /* box-shadow: 0px 0px 17px -1px rgba(0,0,0,0.32); */
 }
 
 input:focus::-webkit-input-placeholder { 
@@ -112,6 +114,7 @@ button {
     margin-left: 10px;
     font-weight: bold;
     padding: 1px;
+    cursor: pointer;
 }
 
 p {
@@ -131,11 +134,24 @@ p {
 
 .list_count {
     display: inline-block;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.list_item {
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    border-radius: 50%;
+    background: #204969;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.list_item:hover, .video_discription_click:hover {
     background: #08ffc8;
     color: #204969;
-    margin-left: 10px;
-    list-style-type: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer
+    transition-duration: .2s;
 }
