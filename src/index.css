@@ -16,12 +16,19 @@ code {
 
 .container {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 1600px;
+  margin: auto;
+}
+
+.count_box {
+  display: block;
+  margin-top: 30px;
 }

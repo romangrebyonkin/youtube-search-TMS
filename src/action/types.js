@@ -1,3 +1,4 @@
 export const SEARCH_VIDEO = 'SEARCH_VIDEO'
 export const FETCH_VIDEO_ID = 'FETCH_VIDEO_ID'
 export const FETCH_NEXT_PAGE = 'FETCH_NEXT_PAGE'
+export const CHANGE_PAGE = 'CHANGE_PAGE'

@@ -6,12 +6,12 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #fff7f7;
-    margin: 30px;
     text-align: center;
     border-radius: 20px;
     position: relative;
     color: #204969;
     font-family: 'Quicksand', sans-serif;
+    margin-top: 100px;
 }
 
 .title_box {
@@ -127,4 +127,15 @@ p {
 .link {
     padding: 10px;
     background: #08ffc8;
+}
+
+.list_count {
+    display: inline-block;
+    background: #08ffc8;
+    color: #204969;
+    margin-left: 10px;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer
 }

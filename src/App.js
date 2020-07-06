@@ -6,17 +6,23 @@ import { Pagination } from './components/Pagination'
 
 
 function App() {
-  const video = useSelector(state => state.video)
+  const videoData = useSelector(state => state.video.test)
 
-  // const nextPage = (pageNumber) => {
+  const totalVideoCount = useSelector(state => state.video.totalVideoCount)
+  const pageSize = 4
 
-  // }
+  let pagesCount = Math.ceil(totalVideoCount / pageSize)
+  let pages = []
+
+  for(let i = 1; i <= pagesCount; i++) {
+    pages.push(i)
+  }
 
   return (
     <div className="container">
       <Input />
       <div className='wrapper'>
-        { video.likes.map((item, index) => (
+        { videoData.map((item, index) => (
             <VideoBox 
               key={index}
               title={item.snippet.title}
@@ -33,7 +39,9 @@ function App() {
           )
           )}
       </div>
-    <Pagination />
+      <div className='count_box'>
+      { pages.map((item, index) => (<Pagination value={item} key={index}/>))}
+      </div>
     </div>
   );
 }

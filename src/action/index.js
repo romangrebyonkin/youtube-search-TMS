@@ -1,5 +1,7 @@
 import axios from 'axios';
-import {SEARCH_VIDEO, FETCH_VIDEO_ID, FETCH_NEXT_PAGE } from './types'
+import { SEARCH_VIDEO, FETCH_VIDEO_ID } from './types'
+
+const KEY = 'AIzaSyCJ0NFqqk17fyKKRXoZo2wqbxLXKyGbFgw'
 
 export const searchVideo = text => dispatch => {
     dispatch(
@@ -10,15 +12,11 @@ export const searchVideo = text => dispatch => {
     ) 
 }
 
-
-
-
 export const fetchVideoID = (text) => dispatch => {
-    axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyB6LB1ifuKpJDlczaXCk5vRm4AXzULLRGo&part=snippet&maxResults=10&q=${text}`)
+    axios.get(`https://www.googleapis.com/youtube/v3/search?key=${KEY}&part=snippet&maxResults=15&q=${text}`)
     .then(response => { const id = response.data.items.map(item => item.id.videoId)
         const list = response.data
-        console.log(list.pageInfo.resultsPerPage)
-    axios.get(`https://www.googleapis.com/youtube/v3/videos?key=AIzaSyB6LB1ifuKpJDlczaXCk5vRm4AXzULLRGo&id=${id}&part=snippet,statistics`)
+    axios.get(`https://www.googleapis.com/youtube/v3/videos?key=${KEY}&id=${id}&part=snippet,statistics`)
     .then(response => dispatch({
         type: FETCH_VIDEO_ID,
         payload: response.data.items,

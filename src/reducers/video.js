@@ -1,4 +1,4 @@
-import { SEARCH_VIDEO, FETCH_VIDEO_ID, FETCH_NEXT_PAGE } from '../action/types';
+import { SEARCH_VIDEO, FETCH_VIDEO_ID, CHANGE_PAGE} from '../action/types';
 
 const initialState = {
     text: '',
@@ -21,13 +21,14 @@ const videoReducer = (state = initialState, action) => {
                 ...state,
                 likes: action.payload,
                 list: action.newPayload,
+                test: action.payload.slice(0,4),
                 totalVideoCount: action.totalVideoCount
-            }   
-        case FETCH_NEXT_PAGE:
-            return{
+            }  
+        case CHANGE_PAGE:
+            return {
                 ...state,
                 test: action.payload
-            }       
+            }      
         default:
             return state
     }
