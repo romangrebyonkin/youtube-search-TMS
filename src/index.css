@@ -11,7 +11,7 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 
 .container {
@@ -21,11 +21,15 @@ code {
 
 .wrapper {
   display: flex;
+  flex-shrink: 1;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 40px;
-  width: 1600px;
+  max-width: 1400px;
+  min-width: 600px;
   margin: auto;
+  margin-top: 100px;
+  box-sizing: border-box;
 }
 
 .count_box {

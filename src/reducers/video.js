@@ -5,7 +5,7 @@ const initialState = {
     list: [],
     likes: [],
     totalVideoCount: '',
-    test: []
+    pageData: []
 }
 
 
@@ -21,13 +21,13 @@ const videoReducer = (state = initialState, action) => {
                 ...state,
                 likes: action.payload,
                 list: action.newPayload,
-                test: action.payload.slice(0,4),
+                pageData: action.payload.slice(0,4),
                 totalVideoCount: action.totalVideoCount
             }  
         case CHANGE_PAGE:
             return {
                 ...state,
-                test: action.payload
+                pageData: action.payload
             }      
         default:
             return state

@@ -1,14 +1,14 @@
 import React from 'react';
-import {useSelector, useDispatch} from 'react-redux'
+import {useSelector} from 'react-redux'
 import { VideoBox } from './components/VideoItem';
 import { Input } from './components/Input';
 import { Pagination } from './components/Pagination'
 
 
 function App() {
-  const videoData = useSelector(state => state.video.test)
-
+  const pageData = useSelector(state => state.video.pageData)
   const totalVideoCount = useSelector(state => state.video.totalVideoCount)
+
   const pageSize = 4
 
   let pagesCount = Math.ceil(totalVideoCount / pageSize)
@@ -22,7 +22,7 @@ function App() {
     <div className="container">
       <Input />
       <div className='wrapper'>
-        { videoData.map((item, index) => (
+        { pageData.map((item, index) => (
             <VideoBox 
               key={index}
               title={item.snippet.title}

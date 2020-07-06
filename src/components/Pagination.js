@@ -13,17 +13,19 @@ export const Pagination = ({value}) => {
 
     const myCount = () => {
         let pageNum = a.value
-        console.log(pageNum)
+
         let start = (pageNum - 1) * pageSize
+
         let end = start + pageSize
 
         let notes = totalVideoData.slice(start, end)
-        console.log(notes)
+
         dispatch({type: CHANGE_PAGE, payload: notes})
     } 
     return (
         <div className='list_count'>
-            <li onClick={myCount}>{value}</li>
+            {/* <li onClick={myCount}></li> */}
+            <div className='list_item' onClick={myCount}>{value}</div>
       </div>
     )
 }

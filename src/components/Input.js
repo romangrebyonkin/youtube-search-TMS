@@ -1,7 +1,7 @@
 import React from 'react'
 import './components.css'
 import {useSelector, useDispatch} from 'react-redux'
-import { searchVideo, fetchVideoID, fetchVideo } from '../action'
+import { searchVideo, fetchVideoID } from '../action'
 
 
 
